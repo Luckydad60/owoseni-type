@@ -17,7 +17,6 @@ import { MdOutlineAutoAwesomeMosaic } from "react-icons/md";
 
 
 function Home() {
-  const [modal, setModal] = useState(false)
   const [text] = useTypewriter({
     words: ["Blockchain", "Token", "NFT" ],
     loop: {},
